@@ -13,11 +13,11 @@ type Issue = {
 const initialIssues: Issue[] = [
   {
     title: "Do stuff",
-    labels: []
+    labels: [{text: "Feature", color: "blue"}]
   },
   {
     title: "Do stuff",
-    labels: []
+    labels: [{text: "Feature", color: "blue"}, {text: "Wontfix", color: "yellow"}]
   }
 ]
 
@@ -74,11 +74,11 @@ function App() {
             {
               issues.map((issue, i) => (
                 <li key={i} className="list-group-item">
-                  <input className="form-check-input me-1" type="checkbox" />
+                  <input className="form-check-input d-inline-block me-2" type="checkbox" />
                   {issue.title}
                   {
                     issue.labels.map((label, l) => (
-                      <span key={l} className={`badge rounded-pill ${classNames[label.color]}`}>{label.text}</span>
+                      <span key={l} className={`badge rounded-pill ${classNames[label.color]} ms-2 d-inline-block`}>{label.text}</span>
                     ))
                   }
                 </li>
