@@ -1,14 +1,5 @@
 import { useState } from "react";
-
-type Label = {
-  text: string,
-  color: "blue" | "yellow" | "red"
-};
-
-type Issue = {
-  title: string,
-  labels: Label[]
-};
+import { Issue } from "./issue-model";
 
 const initialIssues: Issue[] = [
   {
