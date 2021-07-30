@@ -5,5 +5,6 @@ export type Label = {
 
 export type Issue = {
     title: string,
-    labels: Label[]
+    labels: Label[],
+    selected: boolean
 };
